@@ -1,0 +1,60 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cloud Containers Virtualização &amp; IAC</title>
+        <link>http://example.org/</link>
+        <description>Site Devops</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>jcastro@jcastro.net ( João Castro)</managingEditor>
+            <webMaster>jcastro@jcastro.net ( João Castro)</webMaster><lastBuildDate>Mon, 29 Jun 2020 22:53:40 &#43;0000</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Swarm Basico</title>
+    <link>http://example.org/swarm-basico/</link>
+    <pubDate>Mon, 29 Jun 2020 22:53:40 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/swarm-basico/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/header.jpg" referrerpolicy="no-referrer">
+            </div>Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
+  Manager : Gerenciamento do cluster
+ Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
+ E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:]]></description>
+</item><item>
+    <title>Docker Basico</title>
+    <link>http://example.org/linuxtips-docker/</link>
+    <pubDate>Mon, 29 Jun 2020 20:53:40 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/linuxtips-docker/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/docker.png" referrerpolicy="no-referrer">
+            </div>Instalação 1 2 3 4 5 6  curl -fsSL https://get.docker.com/ | bash docker version docker container ls   comandos docker registry e dockerhub  Comandos Utilizados:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  docker image inspect debian docker history linuxtips/apache:1.0 docker login docker login registry.suaempresa.com docker push linuxtips/apache:1.0 docker pull linuxtips/apache:1.0 docker image ls # criando registry local docker container run -d -p 5000:5000 --restart=always --name registry registry:2 # tag na imagem docker tag IMAGEMID localhost:5000/apache   Gerenciamento de Volumes 1 2 3 4 5 6 7 8 9 10 11 12 13 14  docker container run -ti --mount type=bind,src=http://example.org/volume,dst=/volume ubuntu docker container run -ti --mount type=bind,src=http://example.org/root/primeiro_container,dst=/volume ubuntu docker container run -ti --mount type=bind,src=http://example.org/root/primeiro_container,dst=/volume,ro ubuntu docker volume create giropops docker volume rm giropops docker volume inspect giropops docker volume prune docker container run -d --mount type=volume,source=giropops,destination=/var/opa nginx docker container create -v /data --name dbdados centos docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.]]></description>
+</item><item>
+    <title>My First Post</title>
+    <link>http://example.org/post1/</link>
+    <pubDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/post1/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/header2.png" referrerpolicy="no-referrer">
+            </div>Instalação 1 2 3 4 5 6  curl -fsSL https://get.docker.com/ | bash docker version docker container ls   ###comandos docker registry e dockerhub
+ Comandos Utilizados:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  docker image inspect debian docker history linuxtips/apache:1.0 docker login docker login registry.suaempresa.com docker push linuxtips/apache:1.0 docker pull linuxtips/apache:1.0 docker image ls # criando registry local docker container run -d -p 5000:5000 --restart=always --name registry registry:2 # tag na imagem docker tag IMAGEMID localhost:5000/apache   Gerenciamento de Volumes 1 2 3 4 5 6 7 8 9 10 11 12 13 14  docker container run -ti --mount type=bind,src=http://example.org/volume,dst=/volume ubuntu docker container run -ti --mount type=bind,src=http://example.org/root/primeiro_container,dst=/volume ubuntu docker container run -ti --mount type=bind,src=http://example.org/root/primeiro_container,dst=/volume,ro ubuntu docker volume create giropops docker volume rm giropops docker volume inspect giropops docker volume prune docker container run -d --mount type=volume,source=giropops,destination=/var/opa nginx docker container create -v /data --name dbdados centos docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.]]></description>
+</item><item>
+    <title>About LoveIt</title>
+    <link>http://example.org/index.en/</link>
+    <pubDate>Fri, 02 Aug 2019 11:04:49 &#43;0800</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/index.en/</guid>
+    <description><![CDATA[<i class="far fa-kiss-wink-heart fa-fw"></i>&nbsp;LoveIt is a clean, elegant but advanced blog theme for Hugo developed by Dillon.
+It is based on the original LeaveIt Theme and KeepIt Theme.
+ Hugo Theme LoveItHugo Theme LoveIt
+" Hugo Theme LoveIt 
+Features Performance and SEO  <i class="fas fa-rocket fa-fw"></i>&nbsp;Optimized for performance: <sup>99</sup>/<sub>100</sub> on mobile and <sup>100</sup>/<sub>100</sub> on desktop in Google PageSpeed Insights <i class="fab fa-searchengin fa-fw"></i>&nbsp;Optimized SEO performance with a correct SEO SCHEMA based on JSON-LD <i class="fab fa-google fa-fw"></i>&nbsp;Google Analytics supported <i class="far fa-chart-bar fa-fw"></i>&nbsp;Fathom Analytics supported <i class="fas fa-search fa-fw"></i>&nbsp;Search engine verification supported (Google, Bind, Yandex and Baidu) <i class="fas fa-tachometer-alt fa-fw"></i>&nbsp;CDN for third-party libraries supported <i class="fas fa-cloud-download-alt fa-fw"></i>&nbsp;Automatically converted images with Lazy Load by lazysizes  Appearance and Layout  <sup><i class="fas fa-desktop"></i></sup>/<sub><i class="fas fa-mobile"></i></sub> Responsive layout <sup><i class="fas fa-sun"></i></sup>/<sub><i class="fas fa-moon"></i></sub> <sup>Light</sup>/<sub>Dark</sub> mode <i class="fas fa-layer-group fa-fw"></i>&nbsp;Globally consistent design language <i class="fas fa-ellipsis-h fa-fw"></i>&nbsp;Pagination supported <i class="far fa-list-alt fa-fw"></i>&nbsp;Easy-to-use and self-expanding table of contents <i class="fas fa-language fa-fw"></i>&nbsp;Multilanguage supported and i18n ready <i class="fab fa-css3-alt fa-fw"></i>&nbsp;Beautiful CSS animation  Social and Comment Systems  <i class="far fa-user fa-fw"></i>&nbsp;Gravatar supported by Gravatar <i class="fas fa-user-circle fa-fw"></i>&nbsp;Local Avatar supported <i class="far fa-id-card fa-fw"></i>&nbsp;Up to 64 social links supported <i class="fas fa-share-square fa-fw"></i>&nbsp;Up to 28 share sites supported <i class="far fa-comment fa-fw"></i>&nbsp;Disqus comment system supported by Disqus <i class="far fa-comment-dots fa-fw"></i>&nbsp;Gitalk comment system supported by Gitalk <i class="far fa-comment-alt fa-fw"></i>&nbsp;Valine comment system supported by Valine <i class="far fa-comments fa-fw"></i>&nbsp;Facebook comments system supported by Facebook <i class="fas fa-comment fa-fw"></i>&nbsp;Telegram comments system supported by Comments <i class="fas fa-comment-dots fa-fw"></i>&nbsp;Commento comment system supported by Commento <i class="fas fa-comment-alt fa-fw"></i>&nbsp;Utterances comment system supported by Utterances  Extended Features  <i class="fas fa-search fa-fw"></i>&nbsp;Search supported by Lunr.]]></description>
+</item><item>
+    <title>Basico sobre Ansible</title>
+    <link>http://example.org/ansible/</link>
+    <pubDate>Tue, 24 Jan 2017 20:03:47 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/ansible/</guid>
+    <description><![CDATA[NOTAS: sobre ansible
+Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access 1 2  Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS   Facts: coleta informações sobre o host alvo, sempre é executado antes de qualqueroutro modulo ou comandopara desativar add no playbookgather_facts: false 1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.]]></description>
+</item></channel>
+</rss>

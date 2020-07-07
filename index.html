@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+	<meta name="generator" content="Hugo 0.73.0" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Cloud Containers Virtualização &amp; IAC</title><meta name="Description" content="Site Devops"><meta property="og:title" content="Cloud Containers Virtualização &amp; IAC" />
+<meta property="og:description" content="Site Devops" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/" />
+<meta property="og:image" content="http://example.org/logo.png"/>
+<meta property="og:updated_time" content="2020-06-29T22:53:40+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content="Cloud Containers Virtualização &amp; IAC"/>
+<meta name="twitter:description" content="Site Devops"/>
+<meta name="application-name" content="Devops">
+<meta name="apple-mobile-web-app-title" content="Devops"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Cloud Containers Virtualização &amp; IAC">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Cloud Containers Virtualização &amp; IAC"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "http:\/\/example.org\/","inLanguage": "en-us","author": {
+                "@type": "Person",
+                "name": " João Castro"
+            },"description": "Site Devops","name": "Cloud Containers Virtualização \u0026 IAC"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cloud Containers Virtualização &amp; IAC"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/term2.gif"
+        data-srcset="/images/term2.gif, /images/term2.gif 1.5x, /images/term2.gif 2x"
+        data-sizes="auto"
+        alt="/images/term2.gif"
+        title="/images/term2.gif" />jCastro.net</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cloud Containers Virtualização &amp; IAC"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/term2.gif"
+        data-srcset="/images/term2.gif, /images/term2.gif 1.5x, /images/term2.gif 2x"
+        data-sizes="auto"
+        alt="/images/term2.gif"
+        title="/images/term2.gif" />jCastro.net</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="Posts"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/cloud.jpg"
+        data-srcset="/images/cloud.jpg, /images/cloud.jpg 1.5x, /images/cloud.jpg 2x"
+        data-sizes="auto"
+        alt="/images/cloud.jpg"
+        title="/images/cloud.jpg" /></a></div><h1 class="home-title">Cloud, Containers, Virtualização & IAC </h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/joaocsjr" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/joaocsjr" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/jcjr22" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="mailto:jcastro@jcastro.net" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div><h3 class="home-disclaimer">IT Pro desbravando o mundo Devops</h3></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/swarm-basico/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/header.jpg"
+        data-srcset="/images/header.jpg, /images/header.jpg 1.5x, /images/header.jpg 2x"
+        data-sizes="auto"
+        alt="/images/header.jpg"
+        title="/images/header.jpg" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/swarm-basico/">Swarm Basico</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="2020-06-29">2020-06-29</time></span>&nbsp;<span class="post-category">incluido em <a href="/categories/vmware/"><i class="far fa-folder fa-fw"></i>VMware</a></span></div><div class="content">Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
+  Manager : Gerenciamento do cluster
+ Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
+ E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:</div><div class="post-footer">
+        <a href="/swarm-basico/">Leia mais</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/airwatch/">AirWatch</a>,&nbsp;<a href="/tags/android/">android</a>,&nbsp;<a href="/tags/device/">device</a>,&nbsp;<a href="/tags/ios/">ios</a>,&nbsp;<a href="/tags/manager/">manager</a>,&nbsp;<a href="/tags/mdm/">mdm</a>,&nbsp;<a href="/tags/mobile/">mobile</a>,&nbsp;<a href="/tags/vmware/">vmware</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/linuxtips-docker/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/docker.png"
+        data-srcset="/images/docker.png, /images/docker.png 1.5x, /images/docker.png 2x"
+        data-sizes="auto"
+        alt="/images/docker.png"
+        title="/images/docker.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/linuxtips-docker/">Docker Basico</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="2020-06-29">2020-06-29</time></span>&nbsp;<span class="post-category">incluido em <a href="/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div><div class="content">Instalação 1 2 3 4 5 6  curl -fsSL https://get.docker.com/ | bash docker version docker container ls   comandos docker registry e dockerhub  Comandos Utilizados:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  docker image inspect debian docker history linuxtips/apache:1.0 docker login docker login registry.suaempresa.com docker push linuxtips/apache:1.0 docker pull linuxtips/apache:1.0 docker image ls # criando registry local docker container run -d -p 5000:5000 --restart=always --name registry registry:2 # tag na imagem docker tag IMAGEMID localhost:5000/apache   Gerenciamento de Volumes 1 2 3 4 5 6 7 8 9 10 11 12 13 14  docker container run -ti --mount type=bind,src=/volume,dst=/volume ubuntu docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu docker volume create giropops docker volume rm giropops docker volume inspect giropops docker volume prune docker container run -d --mount type=volume,source=giropops,destination=/var/opa nginx docker container create -v /data --name dbdados centos docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.</div><div class="post-footer">
+        <a href="/linuxtips-docker/">Leia mais</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/post1/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/header2.png"
+        data-srcset="/images/header2.png, /images/header2.png 1.5x, /images/header2.png 2x"
+        data-sizes="auto"
+        alt="/images/header2.png"
+        title="/images/header2.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/post1/">My First Post</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i> João Castro</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="2020-03-04">2020-03-04</time></span></div><div class="content">Instalação 1 2 3 4 5 6  curl -fsSL https://get.docker.com/ | bash docker version docker container ls   ###comandos docker registry e dockerhub
+ Comandos Utilizados:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  docker image inspect debian docker history linuxtips/apache:1.0 docker login docker login registry.suaempresa.com docker push linuxtips/apache:1.0 docker pull linuxtips/apache:1.0 docker image ls # criando registry local docker container run -d -p 5000:5000 --restart=always --name registry registry:2 # tag na imagem docker tag IMAGEMID localhost:5000/apache   Gerenciamento de Volumes 1 2 3 4 5 6 7 8 9 10 11 12 13 14  docker container run -ti --mount type=bind,src=/volume,dst=/volume ubuntu docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu docker volume create giropops docker volume rm giropops docker volume inspect giropops docker volume prune docker container run -d --mount type=volume,source=giropops,destination=/var/opa nginx docker container create -v /data --name dbdados centos docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.</div><div class="post-footer">
+        <a href="/post1/">Leia mais</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/index.en/">About LoveIt</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i> João Castro</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="2019-08-02">2019-08-02</time></span></div><div class="content"><i class="far fa-kiss-wink-heart fa-fw"></i>&nbsp;LoveIt is a clean, elegant but advanced blog theme for Hugo developed by Dillon.
+It is based on the original LeaveIt Theme and KeepIt Theme.
+ Hugo Theme LoveItHugo Theme LoveIt
+" Hugo Theme LoveIt 
+Features Performance and SEO  <i class="fas fa-rocket fa-fw"></i>&nbsp;Optimized for performance: <sup>99</sup>/<sub>100</sub> on mobile and <sup>100</sup>/<sub>100</sub> on desktop in Google PageSpeed Insights <i class="fab fa-searchengin fa-fw"></i>&nbsp;Optimized SEO performance with a correct SEO SCHEMA based on JSON-LD <i class="fab fa-google fa-fw"></i>&nbsp;Google Analytics supported <i class="far fa-chart-bar fa-fw"></i>&nbsp;Fathom Analytics supported <i class="fas fa-search fa-fw"></i>&nbsp;Search engine verification supported (Google, Bind, Yandex and Baidu) <i class="fas fa-tachometer-alt fa-fw"></i>&nbsp;CDN for third-party libraries supported <i class="fas fa-cloud-download-alt fa-fw"></i>&nbsp;Automatically converted images with Lazy Load by lazysizes  Appearance and Layout  <sup><i class="fas fa-desktop"></i></sup>/<sub><i class="fas fa-mobile"></i></sub> Responsive layout <sup><i class="fas fa-sun"></i></sup>/<sub><i class="fas fa-moon"></i></sub> <sup>Light</sup>/<sub>Dark</sub> mode <i class="fas fa-layer-group fa-fw"></i>&nbsp;Globally consistent design language <i class="fas fa-ellipsis-h fa-fw"></i>&nbsp;Pagination supported <i class="far fa-list-alt fa-fw"></i>&nbsp;Easy-to-use and self-expanding table of contents <i class="fas fa-language fa-fw"></i>&nbsp;Multilanguage supported and i18n ready <i class="fab fa-css3-alt fa-fw"></i>&nbsp;Beautiful CSS animation  Social and Comment Systems  <i class="far fa-user fa-fw"></i>&nbsp;Gravatar supported by Gravatar <i class="fas fa-user-circle fa-fw"></i>&nbsp;Local Avatar supported <i class="far fa-id-card fa-fw"></i>&nbsp;Up to 64 social links supported <i class="fas fa-share-square fa-fw"></i>&nbsp;Up to 28 share sites supported <i class="far fa-comment fa-fw"></i>&nbsp;Disqus comment system supported by Disqus <i class="far fa-comment-dots fa-fw"></i>&nbsp;Gitalk comment system supported by Gitalk <i class="far fa-comment-alt fa-fw"></i>&nbsp;Valine comment system supported by Valine <i class="far fa-comments fa-fw"></i>&nbsp;Facebook comments system supported by Facebook <i class="fas fa-comment fa-fw"></i>&nbsp;Telegram comments system supported by Comments <i class="fas fa-comment-dots fa-fw"></i>&nbsp;Commento comment system supported by Commento <i class="fas fa-comment-alt fa-fw"></i>&nbsp;Utterances comment system supported by Utterances  Extended Features  <i class="fas fa-search fa-fw"></i>&nbsp;Search supported by Lunr.</div><div class="post-footer">
+        <a href="/index.en/">Leia mais</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/ansible/">Basico sobre Ansible</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>joaocsjr</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="2017-01-24">2017-01-24</time></span>&nbsp;<span class="post-category">incluido em <a href="/categories/ansible/"><i class="far fa-folder fa-fw"></i>ansible</a></span></div><div class="content">NOTAS: sobre ansible
+Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access 1 2  Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS   Facts: coleta informações sobre o host alvo, sempre é executado antes de qualqueroutro modulo ou comandopara desativar add no playbookgather_facts: false 1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.</div><div class="post-footer">
+        <a href="/ansible/">Leia mais</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/ansible/">ansible</a>,&nbsp;<a href="/tags/automa%C3%A7%C3%A3o/">automação</a>,&nbsp;<a href="/tags/devops/">devops</a></div></div>
+</article></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">As opiniões expressadas aqui são minhas</div><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.73.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"> João Castro</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"Não deixa pra depois o que voce pode deixar para la"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

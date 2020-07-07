@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>manager - Tag - Cloud Containers Virtualização &amp; IAC</title>
+        <link>http://example.org/tags/manager/</link>
+        <description>manager - Tag - Cloud Containers Virtualização &amp; IAC</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>jcastro@jcastro.net ( João Castro)</managingEditor>
+            <webMaster>jcastro@jcastro.net ( João Castro)</webMaster><lastBuildDate>Mon, 29 Jun 2020 22:53:40 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/manager/" rel="self" type="application/rss+xml" /><item>
+    <title>Swarm Basico</title>
+    <link>http://example.org/swarm-basico/</link>
+    <pubDate>Mon, 29 Jun 2020 22:53:40 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/swarm-basico/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/header.jpg" referrerpolicy="no-referrer">
+            </div>Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
+  Manager : Gerenciamento do cluster
+ Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
+ E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:]]></description>
+</item></channel>
+</rss>
