@@ -11,7 +11,7 @@
     <author>Autor</author>
     <guid>http://example.org/swarm-basico/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/header.jpg" referrerpolicy="no-referrer">
+                <img src="/images/docker.png" referrerpolicy="no-referrer">
             </div>Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
   Manager : Gerenciamento do cluster
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container

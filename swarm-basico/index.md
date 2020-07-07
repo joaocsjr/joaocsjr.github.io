@@ -28,7 +28,7 @@ docker node update --availability
   #inicia o cluster 
   docker swarm init
 
-  #inclui nodes no cluster 
+  #inclui nodes no cluster
   docker swarm join --token \ SWMTKN-1-100_SEU_TOKEN SEU_IP_MASTER:2377
 
 

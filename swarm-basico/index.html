@@ -23,8 +23,8 @@
   Manager : Gerenciamento do cluster
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
  E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:"/>
-<meta name="application-name" content="Devops">
-<meta name="apple-mobile-web-app-title" content="Devops"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content=":whale:Devops">
+<meta name="apple-mobile-web-app-title" content=":whale:Devops"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/swarm-basico/" /><link rel="prev" href="http://example.org/linuxtips-docker/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -131,11 +131,11 @@
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/header.jpg"
-        data-srcset="/images/header.jpg, /images/header.jpg 1.5x, /images/header.jpg 2x"
+        data-src="/images/docker.png"
+        data-srcset="/images/docker.png, /images/docker.png 1.5x, /images/docker.png 2x"
         data-sizes="auto"
-        alt="/images/header.jpg"
-        title="/images/header.jpg" /></div><div class="details toc" id="toc-static"  kept="true">
+        alt="/images/docker.png"
+        title="/images/docker.png" /></div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>Conteúdos</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -207,7 +207,7 @@ replicated</li>
   <span class="c1">#inicia o cluster</span> 
   docker swarm init
 
-  <span class="c1">#inclui nodes no cluster</span> 
+  <span class="c1">#inclui nodes no cluster</span>
   docker swarm join --token <span class="se">\ </span>SWMTKN-1-100_SEU_TOKEN SEU_IP_MASTER:2377
 
 
@@ -363,7 +363,7 @@ replicated</li>
                             <a class="link-to-markdown" href="/swarm-basico/index.md" target="_blank">Leia em Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-via="jcjr22" data-hashtags="AirWatch,android,device,ios,manager,mdm,mobile,vmware"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://example.org/swarm-basico/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-image="/images/header.jpg"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Myspace" data-sharer="myspace" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Compartilhe em Blogger" data-sharer="blogger" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Evernote" data-sharer="evernote" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-via="jcjr22" data-hashtags="AirWatch,android,device,ios,manager,mdm,mobile,vmware"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://example.org/swarm-basico/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-image="/images/docker.png"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Myspace" data-sharer="myspace" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Compartilhe em Blogger" data-sharer="blogger" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Compartilhe em Evernote" data-sharer="evernote" data-url="http://example.org/swarm-basico/" data-title="Swarm Basico"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
