@@ -1,33 +1,33 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Jcastro</title>
-        <link>http://example.org/posts/</link>
-        <description>All Posts | Jcastro</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <title>All Posts -  👨‍💻 [jcastro☮blog]-(~)</title>
+        <link>http://jcastro.net/posts/</link>
+        <description>All Posts |  👨‍💻 [jcastro☮blog]-(~)</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://jcastro.net/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Ansible Basico</title>
-    <link>http://example.org/posts/ansible/</link>
+    <link>http://jcastro.net/posts/categories/ansible/</link>
     <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/ansible/</guid>
+    <guid>http://jcastro.net/posts/categories/ansible/</guid>
     <description><![CDATA[Basico sobre Ansible  NOTAS: sobre ansible
 Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre executado antes de qualquer outro modulo ou comando para desativar add no playbook gather_facts: false
 $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.]]></description>
 </item><item>
     <title>Docker Swarm</title>
-    <link>http://example.org/posts/swarm/</link>
+    <link>http://jcastro.net/posts/swarm/</link>
     <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/swarm/</guid>
+    <guid>http://jcastro.net/posts/swarm/</guid>
     <description><![CDATA[Swarm Basico Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
   Manager : Gerenciamento do cluster
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
  E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:]]></description>
 </item><item>
     <title>Creating a New Theme</title>
-    <link>http://example.org/posts/hugoisforlovers/</link>
+    <link>http://jcastro.net/posts/hugoisforlovers/</link>
     <pubDate>Sun, 28 Sep 2014 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/hugoisforlovers/</guid>
+    <guid>http://jcastro.net/posts/hugoisforlovers/</guid>
     <description><![CDATA[Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
