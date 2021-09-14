@@ -1,87 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>jCastro</title>
-    <link>http://jcastro.net/</link>
-    <description>Recent content on jCastro</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Docker Swarm</title>
-      <link>http://jcastro.net/post/swarm/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/swarm/</guid>
-      <description>Swarm Basico Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Jcastro</title>
+        <link>http://example.org/</link>
+        <description>About LoveIt Theme</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Ansible Basico</title>
+    <link>http://example.org/posts/ansible/</link>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/ansible/</guid>
+    <description><![CDATA[Basico sobre Ansible  NOTAS: sobre ansible
+Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre executado antes de qualquer outro modulo ou comando para desativar add no playbook gather_facts: false
+$ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.]]></description>
+</item><item>
+    <title>Docker Swarm</title>
+    <link>http://example.org/posts/swarm/</link>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/swarm/</guid>
+    <description><![CDATA[Swarm Basico Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
   Manager : Gerenciamento do cluster
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
- E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>http://jcastro.net/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>http://jcastro.net/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Ansible Basico</title>
-      <link>http://jcastro.net/post/ansible/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/ansible/</guid>
-      <description>Basico sobre Ansible  NOTAS: sobre ansible
-Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre é executado antes de qualqueroutro modulo ou comandopara desativar add no playbookgather_facts: false $ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ansible_facts&amp;#34;: { &amp;#34;ansible_default_ipv4&amp;#34;: { &amp;#34;address&amp;#34;: &amp;#34;192.</description>
-    </item>
-    
-    <item>
-      <title>Whoami</title>
-      <link>http://jcastro.net/about/</link>
-      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/about/</guid>
-      <description>Hello, I am Joao Castro :) 🎓 Devops student 💻 Working as a IT Infrastructure Specialist  Good hands-on knowledge of Source Code Management (Version Control System) tools like Git and Subversion Proficient in developing Continuous Integration/ Delivery pipelines Experience with automation/ integration tools like gitlab Knowledge of major cloud service providers, like AWS, Azure etc. Good understanding of Infrastructure as Code (Programmable Infrastructure), and how you can achieve that by using tools like Ansible and Terraform.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>http://jcastro.net/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>http://jcastro.net/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+ E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:]]></description>
+</item><item>
+    <title>Creating a New Theme</title>
+    <link>http://example.org/posts/hugoisforlovers/</link>
+    <pubDate>Sun, 28 Sep 2014 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/hugoisforlovers/</guid>
+    <description><![CDATA[Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-  </channel>
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:]]></description>
+</item></channel>
 </rss>

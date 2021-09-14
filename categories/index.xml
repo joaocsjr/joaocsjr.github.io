@@ -1,47 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on jCastro</title>
-    <link>http://jcastro.net/categories/</link>
-    <description>Recent content in Categories on jCastro</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ansible</title>
-      <link>http://jcastro.net/categories/ansible/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/categories/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>redhat</title>
-      <link>http://jcastro.net/categories/redhat/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/categories/redhat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>http://jcastro.net/categories/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>http://jcastro.net/categories/golang/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcastro.net/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Jcastro</title>
+        <link>http://example.org/categories/</link>
+        <description>Categories - Category - Jcastro</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>
