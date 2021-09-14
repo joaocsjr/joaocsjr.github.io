@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Docker Swarm &middot; jCastro </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.88.1" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="http://jcastro.net/css/nix.css">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='http://jcastro.net/'>
+        jcastro@jcastro.net ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='http://jcastro.net/'>/home/jcastro</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="http://jcastro.net/about">~/about</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="http://jcastro.net/post">~/post</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="http://jcastro.net/post/swarm/">Docker Swarm</a></h1>
+                <span class="post-date">2021-09-14 </span>
+                <div class="post-content">
+                    <h1 id="swarm-basico">Swarm Basico</h1>
+<h1 id="docker-swarm">Docker swarm</h1>
+<ul>
+<li>
+<p>Nativo no docker concorrente do kubernetes é dividido em 2 funções:</p>
+<ul>
+<li>
+<p><em><strong>Manager :</strong></em> Gerenciamento do cluster</p>
+<ul>
+<li>Necessario criar HA do manager</li>
+<li>sempre impar 51% de recursos minimo pra manter o cluster no ar</li>
+<li>sao diferenciados pelo token quando e feito o join no cluster</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Worker :</strong></em> execução do container</p>
+<ul>
+<li>E possivel colocar em modo manutencao similar esxi</li>
+<li>Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Service:</strong></em></p>
+<ul>
+<li>modos :
+replicated</li>
+</ul>
+</li>
+</ul>
+<h3 id="criando-cluster-swarm">Criando cluster Swarm</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker node update --availability 
+  <span style="color:#75715e">#inicia o cluster </span>
+  docker swarm init
+
+  <span style="color:#75715e">#inclui nodes no cluster</span>
+  docker swarm join --token <span style="color:#ae81ff">\ </span>SWMTKN-1-100_SEU_TOKEN SEU_IP_MASTER:2377
+
+
+<span style="color:#75715e"># lista os nodes </span>
+ docker node ls
+
+  
+ <span style="color:#75715e"># exibe o token</span>
+  docker swarm join-token manager
+
+  docker swarm join-token worker
+
+</code></pre></div><h3 id="gerenciando-cluster-swarm">Gerenciando cluster Swarm</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#info sobre os nodes</span>
+  docker node inspect LINUXtips-02
+
+<span style="color:#75715e"># promove o node para manager</span>
+  docker node promote LINUXtips-03
+<span style="color:#75715e"># despromove o node</span>
+  docker node demote LINUXtips-03
+
+<span style="color:#75715e"># remove node do clsuter </span>
+  docker swarm leave
+<span style="color:#75715e"># --force</span>
+  docker swarm leave --force
+
+
+<span style="color:#75715e"># deleta o node do cluster</span>
+  docker node rm LINUXtips-03
+</code></pre></div><h3 id="criando-e-gerenciando-service">Criando e Gerenciando service</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># cria serviço com o nome de webserver com 5 replicas usando a imagem do ngnix </span>
+  docker service create --name webserver --replicas <span style="color:#ae81ff">5</span> -p 8080:80  nginx
+
+<span style="color:#75715e"># testar se o serviço esta no ar</span>
+  curl QUALQUER_IP_NODES_CLUSTER:8080
+
+<span style="color:#75715e"># lista o serviço</span>
+  docker service ls
+
+<span style="color:#75715e"># lista info em formato mais amigavel </span>
+ docker service inspect www --pretty
+
+<span style="color:#75715e"># lita aonde os services estão rodando </span>
+  docker service ps webserver
+
+<span style="color:#75715e"># info detalhadas dos service </span>
+  docker service inspect webserver
+
+
+<span style="color:#75715e"># tail -f nos logs dos containers </span>
+  docker service logs -f webserver
+
+<span style="color:#75715e"># remove o serviço</span>
+  docker service rm webserver
+
+<span style="color:#75715e">#cria service com mount de volume externo</span>
+  docker service create --name webserver --replicas <span style="color:#ae81ff">5</span> -p 8080:80 --mount type<span style="color:#f92672">=</span>volume,src<span style="color:#f92672">=</span>teste,dst<span style="color:#f92672">=</span>/app  nginx
+
+  docker network create -d overlay giropops
+
+  docker network ls
+
+  docker network inspect giropops
+
+  docker service scale giropops<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+
+  docker network rm giropops
+
+  docker service create --name webserver --network giropops --replicas <span style="color:#ae81ff">5</span> -p 8080:80 --mount type<span style="color:#f92672">=</span>volume,src<span style="color:#f92672">=</span>teste,dst<span style="color:#f92672">=</span>/app  nginx
+
+  docker service update &lt;OPCOES&gt; &lt;Nome_Service&gt; 
+</code></pre></div>
+                </div>
+                
+                <div class="post-comments">
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "your_disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2021 Joao Castro -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+        </div>
+    </body>

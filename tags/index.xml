@@ -1,16 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | Academic</title>
-    <link>https://example.com/tags/</link>
-      <atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tags</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Tags</title>
-      <link>https://example.com/tags/</link>
-    </image>
+    <title>Tags on jCastro</title>
+    <link>http://jcastro.net/tags/</link>
+    <description>Recent content in Tags on jCastro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible</title>
+      <link>http://jcastro.net/tags/ansible/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automacao</title>
+      <link>http://jcastro.net/tags/automacao/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/automacao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playbook</title>
+      <link>http://jcastro.net/tags/playbook/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/playbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>http://jcastro.net/tags/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>http://jcastro.net/tags/go/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://jcastro.net/tags/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://jcastro.net/tags/hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>templates</title>
+      <link>http://jcastro.net/tags/templates/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>http://jcastro.net/tags/themes/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/tags/themes/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

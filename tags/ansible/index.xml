@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ansible on jCastro</title>
+    <link>http://jcastro.net/tags/ansible/</link>
+    <description>Recent content in ansible on jCastro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible Basico</title>
+      <link>http://jcastro.net/post/ansible/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/post/ansible/</guid>
+      <description>Basico sobre Ansible  NOTAS: sobre ansible
+Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre é executado antes de qualqueroutro modulo ou comandopara desativar add no playbookgather_facts: false $ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ansible_facts&amp;#34;: { &amp;#34;ansible_default_ipv4&amp;#34;: { &amp;#34;address&amp;#34;: &amp;#34;192.</description>
+    </item>
+    
+  </channel>
+</rss>

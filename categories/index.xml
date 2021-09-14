@@ -1,16 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | Academic</title>
-    <link>https://example.com/categories/</link>
-      <atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Categories</title>
-      <link>https://example.com/categories/</link>
-    </image>
+    <title>Categories on jCastro</title>
+    <link>http://jcastro.net/categories/</link>
+    <description>Recent content in Categories on jCastro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible</title>
+      <link>http://jcastro.net/categories/ansible/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/categories/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redhat</title>
+      <link>http://jcastro.net/categories/redhat/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/categories/redhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>http://jcastro.net/categories/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://jcastro.net/categories/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcastro.net/categories/golang/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
