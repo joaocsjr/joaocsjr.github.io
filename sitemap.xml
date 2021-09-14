@@ -2,8 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://jcastro.net/posts/categories/ansible/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://jcastro.net/posts/ansible/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://jcastro.net/posts/swarm/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://jcastro.net/posts/openshift/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://jcastro.net/posts/hugoisforlovers/</loc><lastmod>2014-09-28T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://jcastro.net/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://jcastro.net/posts/</loc><lastmod>2021-09-14T00:00:00&#43;00:00</lastmod></url><url>

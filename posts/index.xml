@@ -5,10 +5,10 @@
         <description>All Posts |  👨‍💻 [jcastro☮blog]-(~)</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://jcastro.net/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Ansible Basico</title>
-    <link>http://jcastro.net/posts/categories/ansible/</link>
+    <link>http://jcastro.net/posts/ansible/</link>
     <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>http://jcastro.net/posts/categories/ansible/</guid>
+    <guid>http://jcastro.net/posts/ansible/</guid>
     <description><![CDATA[Basico sobre Ansible  NOTAS: sobre ansible
 Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre executado antes de qualquer outro modulo ou comando para desativar add no playbook gather_facts: false
 $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.]]></description>
@@ -22,6 +22,17 @@ $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#
   Manager : Gerenciamento do cluster
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
  E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:]]></description>
+</item><item>
+    <title>Openshift</title>
+    <link>http://jcastro.net/posts/openshift/</link>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://jcastro.net/posts/openshift/</guid>
+    <description><![CDATA[Notas do treinamento Openshift Anatomia de um arquivo de manifesto Cada arquivo de manifesto tem esses 4 componentes
+  apiVersion: versão da api que sera usada de acordo com as features necessarias para app
+  kind: especifica qual o tipo de resource que esta sendo declarado
+  metadata: especifica o nome dos componentes, labels, namespace
+  spec: especifica a config da app, quais são os containers as images que serao usadas]]></description>
 </item><item>
     <title>Creating a New Theme</title>
     <link>http://jcastro.net/posts/hugoisforlovers/</link>

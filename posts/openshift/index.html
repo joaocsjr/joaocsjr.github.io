@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Openshift -  👨‍💻 [jcastro☮blog]-(~)</title><meta name="Description" content="Linux  &amp; containers"><meta property="og:title" content="Openshift" />
+<meta property="og:description" content="Notas do treinamento Openshift Anatomia de um arquivo de manifesto Cada arquivo de manifesto tem esses 4 componentes
+  apiVersion: versão da api que sera usada de acordo com as features necessarias para app
+  kind: especifica qual o tipo de resource que esta sendo declarado
+  metadata: especifica o nome dos componentes, labels, namespace
+  spec: especifica a config da app, quais são os containers as images que serao usadas" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jcastro.net/posts/openshift/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-14T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Openshift"/>
+<meta name="twitter:description" content="Notas do treinamento Openshift Anatomia de um arquivo de manifesto Cada arquivo de manifesto tem esses 4 componentes
+  apiVersion: versão da api que sera usada de acordo com as features necessarias para app
+  kind: especifica qual o tipo de resource que esta sendo declarado
+  metadata: especifica o nome dos componentes, labels, namespace
+  spec: especifica a config da app, quais são os containers as images que serao usadas"/>
+<meta name="application-name" content="jcastro">
+<meta name="apple-mobile-web-app-title" content="jcastro"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="http://jcastro.net/posts/openshift/" /><link rel="prev" href="http://jcastro.net/posts/hugoisforlovers/" /><link rel="next" href="http://jcastro.net/posts/swarm/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Openshift",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/jcastro.net\/posts\/openshift\/"
+        },"genre": "posts","wordcount":  3313 ,
+        "url": "http:\/\/jcastro.net\/posts\/openshift\/","datePublished": "2021-09-14T00:00:00+00:00","dateModified": "2021-09-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Joao Castro"},"author": {
+                "@type": "Person",
+                "name": "Joao Castro"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title=" 👨‍💻 [jcastro☮blog]-(~)"> 👨‍💻 [jcastro☮blog]-(~)</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/joaocsjr" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><a class="menu-item" href="https://gitlab.com/joaocsjr" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-gitlab fa-fw'></i>  </a><a class="menu-item" href="https://linkedin.com/joaocsjr" title="Linkedin" rel="noopener noreffer" target="_blank"><i class='fab fa-linkedin fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="👨‍💻" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title=" 👨‍💻 [jcastro☮blog]-(~)"> 👨‍💻 [jcastro☮blog]-(~)</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="👨‍💻" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/joaocsjr" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a class="menu-item" href="https://gitlab.com/joaocsjr" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-gitlab fa-fw'></i></a><a class="menu-item" href="https://linkedin.com/joaocsjr" title="Linkedin" rel="noopener noreffer" target="_blank"><i class='fab fa-linkedin fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Openshift</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-14">2021-09-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3313 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;16 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#anatomia-de-um-arquivo-de-manifesto">Anatomia de um arquivo de manifesto</a></li>
+    <li><a href="#yaml-basico">YAML Basico</a></li>
+    <li><a href="#comandos-basicos">Comandos basicos</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#service"><strong>service</strong></a></li>
+    <li><a href="#route">Route</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#estrategias-de-rollout">Estrategias de rollout:</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#persistentes-volumes">Persistentes volumes</a></li>
+    <li><a href="#acess-modes">Acess modes:</a></li>
+    <li><a href="#empydir">empyDir</a></li>
+    <li><a href="#environment-variables">Environment variables</a></li>
+    <li><a href="#secrets">Secrets</a></li>
+    <li><a href="#configmaps">ConfigMaps</a></li>
+    <li><a href="#downward-api">Downward API</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#beneficios">Beneficios</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#para-mais-informações">Para Mais Informações</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="notas-do-treinamento-openshift">Notas do treinamento Openshift</h1>
+<h2 id="anatomia-de-um-arquivo-de-manifesto">Anatomia de um arquivo de manifesto</h2>
+<p><em>Cada arquivo de manifesto tem esses 4 componentes</em></p>
+<ul>
+<li>
+<p><strong>apiVersion:</strong> <em>versão da api que sera usada de acordo com as features necessarias para app</em></p>
+</li>
+<li>
+<p><strong>kind:</strong>  <em>especifica qual o tipo de resource que esta sendo declarado</em></p>
+</li>
+<li>
+<p><strong>metadata:</strong>  <em>especifica o nome dos componentes, labels, namespace</em></p>
+</li>
+<li>
+<p><strong>spec:</strong> <em>especifica a config da app, quais são os containers as images que serao usadas</em></p>
+</li>
+</ul>
+<h2 id="yaml-basico">YAML Basico</h2>
+<ul>
+<li>Use 2 espaços, não use TAB</li>
+<li>Use algum editor de texto que suporte YAML</li>
+<li>Para setar o VIM como editor padrão, Use o comando:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">EDITOR<span style="color:#f92672">=</span>/usr/bin/vim 
+</code></pre></div><h2 id="comandos-basicos">Comandos basicos</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#75715e"># pega status do projeto</span>
+oc status 
+
+<span style="color:#75715e"># verifica info dos **pods** em formato yaml</span>
+oc get **pods** <span style="color:#f92672">[</span>YOUR_APP_PODNAME<span style="color:#f92672">]</span> -o yaml
+
+<span style="color:#75715e"># filtrando saida do comando get **pods**</span>
+oc get **pods** --field-selector status.phase<span style="color:#f92672">=</span>Running
+
+<span style="color:#75715e"># verificando infos do replicationcontroller</span>
+oc get rc <span style="color:#f92672">[</span>RC-NAME<span style="color:#f92672">]</span> -o yaml
+
+<span style="color:#75715e"># verifica infos do deploymenetcontroller</span>
+oc get dc cakephp-mysql-example -o yaml
+
+</code></pre></div><h1 id="exemplos">Exemplos</h1>
+<h2 id="deployment">Deployment</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">httpd-deployment</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">matchLabels</span>:
+      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">httpd</span>
+  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">2</span>
+  <span style="color:#f92672">template</span>:
+    <span style="color:#f92672">metadata</span>:
+      <span style="color:#f92672">labels</span>:
+        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">httpd</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">httpd</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">image-registry.openshift-image-registry.svc:5000/openshift/httpd</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">8080</span>
+</code></pre></div><h2 id="service"><strong>service</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#75715e">**service**</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">httpd-deployment</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">ports</span>:
+  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">8080</span>
+    <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
+    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">httpd</span>
+  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">ClusterIP</span>
+</code></pre></div><h2 id="route">Route</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">route.openshift.io/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Route</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">httpd-deployment</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">port</span>:
+    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
+  <span style="color:#f92672">to</span>:
+    <span style="color:#f92672">kind</span>: <span style="color:#75715e">**service**</span>
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">httpd-deployment</span>
+</code></pre></div><hr>
+<h1 id="conceitos-basicos">Conceitos Basicos</h1>
+<ul>
+<li>
+<p>O código do aplicativo é executado em contêineres. Os <strong>pods</strong> são compostos por um ou mais contêineres. Normalmente, você tem um contêiner por pod. Você pode ter mais de um contêiner em um Pod se quiser que eles compartilhem a rede e o espaço de armazenamento - por exemplo, para ter acesso ao mesmo volume. Cada pod possui um endereço IP. Normalmente, os contêineres não possuem endereços IP individuais.</p>
+</li>
+<li>
+<p>Os <strong>pods</strong> não são persistentes. Eles podem iniciar, parar, travar e reiniciar. Cada vez que um pod é reiniciado, um novo endereço IP é atribuído a ele. Por esse motivo, você não pode confiar que o endereço IP do pod permaneça o mesmo.</p>
+</li>
+<li>
+<p>Um pod pode ter labels, e esses labels são aplicados a todos os <strong>pods</strong> durante esta implantação específica. Os labels podem ser usados ​​para identificar e selecionar <strong>pods</strong>. Os labels são pares de valores-chave. Exemplos de labels incluem app: web, class: frontend e zone: east.</p>
+</li>
+<li>
+<p>Os <strong>pods</strong> podem falhar. Quando eles travam, geralmente você deseja que sejam reiniciados automaticamente. O objeto <strong>ReplicaSet</strong> (ou ReplicationController) é responsável por fazer isso. Ele pode assistir a um único pod ou a um conjunto de <strong>pods</strong>. Ele os seleciona por seletores e labels nos <strong>pods</strong>. Sua única tarefa é garantir que o número solicitado de <strong>pods</strong> esteja ativo e em execução. Por exemplo, você pode ter um <strong>ReplicaSet</strong> chamado rs-web que especifica app: web como um seletor, e você tem <strong>pods</strong> com um label correspondente. Nesse caso, o <strong>ReplicaSet</strong> gerencia o número de réplicas desses <strong>pods</strong> específicos e garante que o número especificado de <strong>pods</strong> exista.</p>
+</li>
+<li>
+<p>Um <strong>ReplicaSet</strong> (ou ReplicationController) fornece apenas uma função muito básica. E se você quiser atualizar o código do aplicativo? Ou iniciar um novo <strong>ReplicaSet</strong> e alternar para ele? Ou migrar gradualmente os <strong>pods</strong> de uma versão antiga para uma nova? Ou reverter para a versão antiga se a nova não estiver funcionando corretamente? Deployments e DeploymentConfigs podem fazer isso por você. Além disso, eles podem fazer isso automaticamente quando detectam alterações na configuração do aplicativo.</p>
+</li>
+<li>
+<p>Os endereços IP dos <strong>pods</strong> não são estáveis. Cada vez que um pod é reiniciado, um novo endereço IP é atribuído a ele. Para acessar um pod, você pode querer que o pod tenha um endereço IP estável. Ou você pode executar vários <strong>pods</strong> idênticos e balancear a carga entre eles; nesse caso, você deve ter um endereço IP estável para o balanceador de carga. Em ambos os casos, você usa um <strong>service</strong>.</p>
+</li>
+<li>
+<p><strong>service</strong>, como <strong>ReplicaSet</strong>s, usam seletores para encontrar os <strong>pods</strong> associados a eles. Os seletores selecionam <strong>pods</strong> com labels específicos. Por exemplo, um <strong>service</strong> denominado <strong>service</strong>-web fornece um endereço IP estável (denominado ClusterIP) para os <strong>pods</strong> com o label app: web.</p>
+</li>
+<li>
+<p>Um ClusterIP fornecido por um <strong>service</strong> é interno ao cluster. Para acessar o aplicativo de fora do cluster, é necessária uma rota. O objeto Route obtém informações sobre <strong>pods</strong> associados do <strong>service</strong> de back-end e atua como um balanceador de carga externo para esses <strong>pods</strong>. As rotas geralmente são implementadas usando HAProxy. As rotas fornecem endereços de nomes de domínio, que podem ser usados ​​para acessar o aplicativo.</p>
+</li>
+</ul>
+<h1 id="openshift-configuration">Openshift Configuration</h1>
+<ul>
+<li>
+<p>O Red Hat OpenShift Container Platform é normalmente implantado como um ambiente multiusuário.Os usuários incluem desenvolvedores de aplicativos, operações, segurança e administradores de plataforma.</p>
+</li>
+<li>
+<p>Todos esses usuários precisam se autenticar na plataforma, seja para acessar o console da web ou a API - por exemplo, com a interface de linha de comando.</p>
+</li>
+<li>
+<p>A autenticação precisa ser configurada para que cada usuário - independentemente de sua função - se autentique com suas próprias credenciais para que todas as ações possam ser auditadas para determinar quem fez o quê.</p>
+</li>
+<li>
+<p>O Processo de  autenticação com OAuth começa com o console da web ou a API redirecionando o usuário para o componente do servidor OAuth.</p>
+</li>
+<li>
+<p>Se o usuário for autenticado com sucesso, ele receberá um token OAuth</p>
+</li>
+<li>
+<p>O cliente inclui o token OAuth em cabeçalhos HTTP em solicitações de API subsequentes.</p>
+</li>
+<li>
+<p>O token OAuth expira após um intervalo de tempo configurável - o padrão é 24 horas - e o usuário deve se autenticar novamente.</p>
+</li>
+<li>
+<p>Você pode recuperar a lista de tokens OAuth ativos e identificar quais usuários estão conectados usando <code>oc get oauthaccesstokens</code>.</p>
+</li>
+<li>
+<p>Uma vez conectado ao cluster, você pode consultar a sessão atual via <code>  oc whoami</code>.</p>
+</li>
+<li>
+<p>O LDAP é um componente comum da infraestrutura de gerenciamento de identidade e acesso.</p>
+</li>
+<li>
+<p>LDAP TLS, é o padrão recomendado para autenticação, para isso ocorrer é necessário a criaçao de um configmap no namespace openshift-config, com a chave do certificado ca.crt <code>oc create configmap ldap-tls-ca -n openshift-config \ --from-file=ca.crt=PATH_TO_LDAP_CA_FILE </code></p>
+</li>
+<li>
+<p><strong>RBAC</strong> - controlas os objetos e determina o que pode ser feito com eles, quais verbos podem ser usados para gerenciar o objeto]</p>
+</li>
+<li>
+<p><em><strong>Roles e ClusterRoles</strong></em> definem ações permitidas para tipos de recursos. As funções são definidas em um namespace de projeto e só podem ser usadas nesse namespace. ClusterRoles pode ser aplicado a todo o cluster ou a um namespace específico.</p>
+</li>
+<li>
+<p><em><strong>RoleBindings</strong></em> concedem acesso mapeando um Role ou ClusterRole para usuários ou grupos para acesso a recursos dentro de um namespace de projeto.</p>
+</li>
+<li>
+<p><em><strong>ClusterRoleBindings</strong></em> concedem acesso a tipos de recursos com escopo de cluster ou tipos de recursos em qualquer namespace.</p>
+</li>
+<li>
+<p><em><strong>ClusterRoleBindings</strong></em> concedem acesso a tipos de recursos com escopo de cluster ou tipos de recursos em qualquer namespace.</p>
+</li>
+<li>
+<p><em><strong>RoleBindings ou ClusterRoleBindings</strong></em> são um tipo de recurso no OpenShift. O acesso para criar esses recursos permite que um usuário conceda acesso a outros usuários ou grupos, mas o OpenShift impede que um usuário conceda acesso que o usuário não possui.</p>
+</li>
+<li>
+<p><strong><strong>service</strong> account</strong> Quando os aplicativos precisam de acesso à API de cluster OpenShift, eles podem usar uma conta de <strong>service</strong> para autenticação e autorização.</p>
+</li>
+<li>
+<p>Cada pod rodando no Red Hat OpenShift Container Platform tem uma conta de <strong>service</strong> associada, e aplicativos externos podem ser integrados ao cluster usando credenciais de conta de <strong>service</strong></p>
+</li>
+<li>
+<p>As contas de <strong>service</strong> OpenShift são tratadas como um tipo de usuário cujo acesso pode ser gerenciado com o controle de acesso baseado em função OpenShift</p>
+</li>
+<li>
+<p>Por exemplo, <strong>DeploymentConfigs</strong> são implementados usando um pod de implantador que é executado com uma conta de <strong>service</strong> de implantador. Os aplicativos em contêineres de pod podem fazer chamadas de API para fins de descoberta. Os servidores Jenkins usam a API de cluster para criar agentes em execução em contêineres. E os operadores usam a API de cluster para monitorar recursos personalizados e a API para gerenciar ConfigMaps, implantações e outros.</p>
+</li>
+<li>
+<p><strong>Security context constraints</strong>  Ao contrário das políticas de autorização, que controlam o que um usuário pode fazer, restrições de contexto de segurança ou SCCs, controlam as ações que um pod pode realizar e o que pode acessar. SCCs são objetos que definem um conjunto de condições com as quais um pod deve ser executado para ser aceito no sistema.</p>
+</li>
+</ul>
+<h1 id="resource-manager">Resource manager</h1>
+<ul>
+<li>
+<p>O gerenciamento de recursos na Red Hat OpenShift Container Platform é um tópico amplo e importante. É o planejamento e exercício do uso controlado dos recursos limitados em um cluster</p>
+</li>
+<li>
+<p>Os recursos necessários para as cargas de trabalho não são infinitos, esteja você em um ambiente de nuvem pública ou em um data center local. Controlar o uso desses recursos é uma função que muitas vezes é negligenciada ou recebe atenção mínima.</p>
+</li>
+<li>
+<p>No Kubernetes, as solicitações e os limites são, em seu nível mais básico, mínimos e máximos que um contêiner pode consumir de recursos específicos. Eles são aplicados a contêineres, não a vagens.</p>
+</li>
+<li>
+<p>Uma request é a quantidade mínima de um recurso que o contêiner requer para ser executado. Esse valor pesa muito no agendador, pois ele decide em qual nó colocar um pod recém-solicitado. Isso Também tem um grande impacto nos cálculos de utilização de recursos que o Kubernetes faz para a capacidade do nó no cluster.</p>
+</li>
+<li>
+<p>Um limit é a quantidade máxima de um recurso que o contêiner pode consumir. Dependendo do tipo de recurso que você está controlando, como CPU ou memória, o Kubernetes reage de maneira diferente se o contêiner tentar exceder esse máximo.</p>
+</li>
+<li>
+<p>QOS - são atribuídas automaticamente a todos os <strong>pods</strong> pelo Kubernetes. Essas classes de QoS não podem ser definidas especificamente pelo usuário que está solicitando o pod. Eles podem, no entanto, ser influenciados pela especificação do pod.</p>
+</li>
+<li>
+<p><strong>BestEffort</strong> Aplicado quando as requests do contêiner e os limite não estão definidos</p>
+</li>
+<li>
+<p><strong>Burstable</strong> Aplicado quando as requests do contêiner são definidas, mas os limits não são definidos ou são superiores à solicitação</p>
+</li>
+<li>
+<p><strong>Guaranteed</strong> Aplicado quando o contêiner requests e limits definidos com o mesmo valor</p>
+</li>
+</ul>
+<h1 id="deployments">Deployments</h1>
+<h2 id="estrategias-de-rollout">Estrategias de rollout:</h2>
+<ul>
+<li><strong>Rolling:</strong> <em>default no openshift, prove continuos update mantendo a disponibilidade da app</em></li>
+<li><strong>Recreate:</strong>  <em>esta estrategia termina todos os <strong>pods</strong> que estão rodando antes de criar uma nova versão do deply</em></li>
+<li><strong>Canary ou Blue-green:</strong>  <em>nessa estrategia vc deve criar um novo deploy, com a nova versão da app tb deve criar novos <strong>service</strong>s, quando a app estiver pronta apenas reaponte o router para o novo <strong>service</strong> com a nova versão</em></li>
+<li><strong>A-B Testing:</strong>  <em>nessa estrategia vc pode criar 2 versoes de um frontend com visual diferente e configurar o trafego de rede para mandar conexoes 50/50 para cada versão, essa tecnica permite usar mais que 2 versões de backend</em></li>
+</ul>
+<h1 id="volumes">Volumes:</h1>
+<h2 id="persistentes-volumes">Persistentes volumes</h2>
+<ul>
+<li>
+<p><strong>PV</strong> = Persistentes volumes Montando em nivel de host ( NFS, ISCSI, FIBERCHANNEL etc)
+NFS mounts</p>
+<pre><code>GlusterFS
+
+Ceph® RBD
+
+AWS Elastic Block Store (EBS)
+
+Google GCE
+
+OpenStack® Cinder
+
+iSCSI
+
+Fibre Channel
+</code></pre>
+</li>
+<li>
+<p><strong>PVC</strong> = Persistentes volumes Claim - consumido do PC e  montando em nivel de pod para persistir os dados do app</p>
+<ul>
+<li>
+<p>Os desenvolvedores podem associar um PersistentVolumeClaim a um objeto, como uma configuração de deployment. o OpenShift monta o volume no pod.</p>
+</li>
+<li>
+<p>Os desenvolvedores podem criar um ou mais PersistentVolumeClaims usando PersistentVolumes para fornecer armazenamento persistente a seus projetos.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="acess-modes">Acess modes:</h2>
+<ul>
+<li>
+<p><strong>ReadWriteOnce:</strong> Volume pode ser montado como read/write por um unico node</p>
+</li>
+<li>
+<p><strong>ReadOnlyMany:</strong> Volume pode ser montado como read-only por varios nodes</p>
+</li>
+<li>
+<p><strong>ReadWriteMany:</strong> Volume pode ser montado como read/write por varios nodes</p>
+</li>
+</ul>
+<h2 id="empydir">empyDir</h2>
+<ul>
+<li>diretorio temporario existe apenas enquanto o pod esta no ar</li>
+<li>iniciado vazio</li>
+<li>criado quando o pod é criado</li>
+<li>é comportilhado entre os containers do mesmo pod</li>
+<li>Como todos os containers no pod podem ler e gravar no  emptyDir, ele  é útil para implantações chamadas de &ldquo;sidecar&rdquo; em que, por exemplo, o contêiner principal executa um <strong>service</strong> e registra localmente no disco, que neste caso é emptyDir.O contêiner secundário pode então pegar esse arquivo de log e transmiti-lo para um <strong>service</strong> de registro.</li>
+</ul>
+<h2 id="environment-variables">Environment variables</h2>
+<ul>
+<li>
+<p>Variáveis ​​de ambiente são amplamente compreendidas e usadas e facilmente consumidas programaticamente, tornando-as uma técnica popular para injetar variáveis ​​de configuração e outros objetos.</p>
+</li>
+<li>
+<p>O OpenShift fornece várias maneiras de definir variáveis ​​de ambiente por meio de segredos, ConfigMaps e a API Downward. As variáveis ​​de ambiente são visíveis no nível do pod.</p>
+</li>
+<li>
+<p>Você pode definir, cancelar ou listar variáveis ​​de ambiente em <strong>pods</strong> ou templates  de pod. Seu escopo esta no nivel de deployment e replication controller</p>
+</li>
+</ul>
+<h2 id="secrets">Secrets</h2>
+<ul>
+<li>
+<p>Secrets fornecem uma maneira de separar as informações confidenciais dos <strong>pods</strong> que as consomem. Os secrets  são armazenados em Base64. Portanto, embora estejam protegidos, isso não fornece criptografia.</p>
+</li>
+<li>
+<p>São montadas nos <strong>pods</strong>  via  volume plug-in.</p>
+</li>
+<li>
+<p>precisam ser definidos primeiro e depois referenciados. Quando montados como volumes, eles são montados como tmpfs e nunca permanecem no storage node.</p>
+</li>
+<li>
+<p>São compartilhados dentro de um namespace.</p>
+</li>
+<li>
+<p>Podem ser montados em <strong>pods</strong> e consumidos como arquivos. A montagem de uma secret em um objeto é feita por meio do comando &ldquo;oc set volume&rdquo; com a flag  &ldquo;&ndash;secret-name&rdquo;.</p>
+</li>
+</ul>
+<h2 id="configmaps">ConfigMaps</h2>
+<ul>
+<li>
+<p>Os ConfigMaps fornecem um mecanismo conveniente para injetar dados de configuração em <strong>pods</strong>. Isso pode incluir arquivos de configuração, blobs JSON e outros objetos de configuração.</p>
+</li>
+<li>
+<p>Os dados são mantidos em pares de chave / valor que podem ser consumidos pelo pod.</p>
+</li>
+<li>
+<p>Casos de uso típicos para ConfigMaps incluem preencher os valores das variáveis ​​de ambiente, definir argumentos de linha de comando e preencher arquivos de configuração como um volume.</p>
+</li>
+<li>
+<p>Há restrições a serem observadas ao usar ConfigMaps. Eles devem ser criados antes de serem consumidos. Eles devem residir em um projeto e não podem ser compartilhados entre projetos ou namespaces.</p>
+</li>
+<li>
+<p>Ao atualizar um ConfigMap com novos valores, essas atualizações não são propagadas para os <strong>pods</strong> existentes. O ConfigMap deve ser redeployed do explicitamente.</p>
+</li>
+</ul>
+<h2 id="downward-api">Downward API</h2>
+<ul>
+<li>O OpenShift expõe uma API Downward que permite que os <strong>pods</strong> acessem informações sobre o ambiente de execução, incluindo pod, namespace e valores de recursos, como memória e CPU.</li>
+</ul>
+<h1 id="continuous-integration">Continuous Integration</h1>
+<ul>
+<li>
+<p>Verifica a integridade do build, verificando se o código-fonte pode ser retirado do repositório e construído para fins de implantação. O processo de construção pode incluir compilar, empacotar e configurar o software.</p>
+</li>
+<li>
+<p>Validar os resultados do teste executando todos os testes criados pelos desenvolvedores em um ambiente semelhante ao de produção para verificar se o código-fonte não foi quebrado como um efeito colateral do commit.</p>
+</li>
+<li>
+<p>Verificar a integração entre vários sistemas usando testes de integração para validar a integração de todos os sistemas usados ​​pelo software.</p>
+</li>
+<li>
+<p>Ele identifica quaisquer problemas e alerta todas as equipes afetadas para corrigir os problemas imediatamente.</p>
+</li>
+<li>
+<p>Você pode realizar a CI manualmente, mas as operações manuais carecem de rastreabilidade, portanto, o processo de CI geralmente é gerenciado por uma ferramenta. Em uma cultura DevOps,CI é obrigatório e executado por uma ferramenta que executa scripts de automação criados por desenvolvedores para evitar intervenção humana durante o processo de CI.</p>
+</li>
+</ul>
+<h2 id="beneficios">Beneficios</h2>
+<ul>
+<li>
+<p><strong>Feedback rápido:</strong> quando uma build é executada, os membros da equipe são imediatamente notificados sobre o status da build. Isso reduz o tempo necessário para descobrir e corrigir quaisquer novos defeitos</p>
+</li>
+<li>
+<p><strong>Risco reduzido:</strong> Ao integrar várias vezes ao dia, você pode reduzir os riscos em seu projeto. Bugs são detectados e corrigidos mais cedo. A integridade do software é mensurável por meio de testes unitarops e relatórios de inspeção de código.</p>
+</li>
+<li>
+<p><strong>Team Ownership:</strong> Com a CI, não existe mais uma situação de &ldquo;nós&rdquo; versus &ldquo;eles&rdquo;. Todos os membros da equipe recebem relatórios regulares sobre o status da build. Isso permite maior visibilidade do projeto, onde todos podem perceber tendências e tomar decisões eficazes. Isso também aumenta a confiança para adicionar novos recursos ao projeto, porque todos estão atualizados sobre o funcionamento atual do projeto.</p>
+</li>
+<li>
+<p><strong>Build de software implantável:</strong> O processo de build deve gerar software que pode ser implantado. Todos estão se esforçando para criar um software que possa ser implantado a qualquer momento. Isso não significa que você deve implantar o software, mas que é um bom release candidate se quiser implantar. Hoje, muitas equipes de desenvolvimento lutam com esse cenário.</p>
+</li>
+<li>
+<p><strong>Processo automatizado:</strong> automatizar a build economiza tempo, custos e esforço. Além disso, o processo é executado sempre da mesma forma. Liberar os desenvolvedores da execução de processos repetitivos permite que eles se concentrem em trabalhos de maior valor.</p>
+</li>
+<li>
+<p>O uso de um repositório de código é um requisito fundamental para qualquer projeto de software profissional. Para construir software de forma eficaz, todos os ativos de software devem ser armazenados em um repositório de código.Além disso, manter um repositório de código ajuda a evitar o problema em que o código funciona em uma máquina, mas não em outra.</p>
+</li>
+<li>
+<p>O Build deve ser totalmente automatizada, incluindo testes. Os testes automatizados devem ser aprovados para que sua construção seja aprovada. Eles são tão importantes quanto a compilação de código.</p>
+</li>
+<li>
+<p>Todos entendem que código que não compila não funciona. O mesmo vale para os testes: o código que não passa nos testes não funciona. Use uma estrutura de teste de unidade, como JUnit.</p>
+</li>
+</ul>
+<h1 id="continuous-delivery">Continuous Delivery</h1>
+<ul>
+<li>
+<p>CD - é uma extensão do CI ele descreve como criar um processo automatizado para construir e configurar seu software. A entrega contínua, ou CD, é simplesmente uma extensão da CI. O CD adiciona suporte para ambientes adicionais, incluindo teste, controle de qualidade e assim por diante</p>
+</li>
+<li>
+<p>CD é importante observar que o software não é implantado automaticamente na produção. O CD cria um artefato que você pode implantar na produção, mas não há nenhum requisito para fazer isso, que pode depender de uma aprovaçção ou validação antes de ser implementado</p>
+</li>
+</ul>
+<h1 id="templates">Templates</h1>
+<ul>
+<li>
+<p>Um template descreve um conjunto de recursos que podem ser personalizados e processados ​​para produzir uma configuração.</p>
+</li>
+<li>
+<p>Cada template é uma lista parametrizada que o OpenShift usa para criar uma lista de recursos, incluindo <strong>service</strong>s, <strong>pods</strong>, rotas e configurações de compilação. Um template também define um conjunto de label para aplicar a todos os recursos que ele cria.</p>
+</li>
+<li>
+<p>Labels são usados ​​para gerenciar recursos gerados, como <strong>pods</strong>. Os labels especificados no template são aplicados a todos os recursos gerados a partir do template</p>
+</li>
+<li>
+<p>As labels são usadas para agrupar objetos e indicar para eles quais são os respectivos <strong>pods</strong> relacionados aquele replication controller ou <strong>service</strong></p>
+</li>
+</ul>
+<h1 id="openshift-application-deployment">Openshift application deployment</h1>
+<ul>
+<li>
+<p>Outro recurso do DeploymentConfigs é que, se a implantação de uma nova versão resultar em um erro, o DeploymentConfig reverterá automaticamente para a versão de trabalho anterior. Ele espera 10 minutos por padrão e, se o aplicativo ainda não estiver pronto, a revisão com falha é excluída e a revisão DeploymentConfig anterior é lançada.</p>
+</li>
+<li>
+<p>Existem outras diferenças entre Deployments e DeploymentConfigs que são descritas na seção Comparing Deployments and DeploymentConfigs da documentação da OpenShift Container Platform.</p>
+</li>
+<li>
+<p>A documentação descreve a diferença da seguinte maneira:</p>
+<ul>
+<li>
+<p>Uma diferença importante entre Deployments e DeploymentConfigs são as propriedades do teorema CAP que cada projeto escolheu para o processo de distribuição. DeploymentConfigs preferem consistência, enquanto as implementações têm preferência por disponibilidade em vez de consistência.</p>
+</li>
+<li>
+<p>Para DeploymentConfigs, se um nó que executa um pod do implantador ficar inativo, ele não será substituído. O processo espera até que o nó volte a ficar online ou seja excluído manualmente. Excluir manualmente o nó também exclui o pod correspondente. Isso significa que você não pode excluir o pod para desfazer a implementação, pois o kubelet é responsável por excluir o pod associado.</p>
+</li>
+<li>
+<p>No entanto, as implementações de implantação são conduzidas por um gerenciador de controlador. O gerenciador de controlador é executado no modo de alta disponibilidade em mestres e usa algoritmos de eleição de líder para valorizar a disponibilidade em vez da consistência. Durante uma falha, é possível que outros mestres atuem na mesma implantação ao mesmo tempo, mas esse problema é resolvido logo após a ocorrência da falha.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Implementações e ReplicaSets são considerados a forma preferencial de implementação de aplicativos. Por outro lado, quando você usa o comando oc new-app, ele cria DeploymentConfigs e ReplicationControllers. É uma boa ideia estar familiarizado com os dois métodos. Este laboratório fornece uma visão geral rápida de suas semelhanças e diferenças</p>
+</li>
+</ul>
+<h2 id="para-mais-informações">Para Mais Informações</h2>
+<ul>
+<li><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-release-via-dnf-or-yum" target="_blank" rel="noopener noreffer">Ansible</a></li>
+<li><a href="https://github.com/ansible/awx/blob/devel/INSTALL.md#installing-awx" target="_blank" rel="noopener noreffer">Ansible AWX</a></li>
+<li><a href="https://docs.docker.com/install/linux/docker-ce/centos/" target="_blank" rel="noopener noreffer">Docker</a></li>
+<li><a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener noreffer">Docker Compose</a></li>
+<li><a href="https://pypi.org/project/docker/" target="_blank" rel="noopener noreffer">Docker SDK</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/hugoisforlovers/" class="prev" rel="prev" title="Creating a New Theme"><i class="fas fa-angle-left fa-fw"></i>Creating a New Theme</a>
+            <a href="/posts/swarm/" class="next" rel="next" title="Docker Swarm">Docker Swarm<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

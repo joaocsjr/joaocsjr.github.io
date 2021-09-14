@@ -95,11 +95,11 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h1 class="home-title">Joao Castro</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/joaocsjr" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/joaocsjr" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/jcjr22" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/joaocsjr" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="mailto:jcastro@jcastro.net" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/categories/ansible/">Ansible Basico</a>
+        <a href="/posts/ansible/">Ansible Basico</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span></div><div class="content">Basico sobre Ansible  NOTAS: sobre ansible
 Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre executado antes de qualquer outro modulo ou comando para desativar add no playbook gather_facts: false
 $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.</div><div class="post-footer">
-        <a href="/posts/categories/ansible/">Read More</a></div>
+        <a href="/posts/ansible/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/swarm/">Docker Swarm</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span></div><div class="content">Swarm Basico Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
@@ -107,6 +107,14 @@ $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#
  Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
  E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:</div><div class="post-footer">
         <a href="/posts/swarm/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/openshift/">Openshift</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Joao Castro</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-09-14">2021-09-14</time></span></div><div class="content">Notas do treinamento Openshift Anatomia de um arquivo de manifesto Cada arquivo de manifesto tem esses 4 componentes
+  apiVersion: versão da api que sera usada de acordo com as features necessarias para app
+  kind: especifica qual o tipo de resource que esta sendo declarado
+  metadata: especifica o nome dos componentes, labels, namespace
+  spec: especifica a config da app, quais são os containers as images que serao usadas</div><div class="post-footer">
+        <a href="/posts/openshift/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/hugoisforlovers/">Creating a New Theme</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Michael Henderson</a></span>&nbsp;<span class="post-publish">published on <time datetime="2014-09-28">2014-09-28</time></span></div><div class="content">Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
