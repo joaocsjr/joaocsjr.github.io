@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ESX / ESXi - Categoria - Cloud Containers Virtualização &amp; IAC</title>
+        <link>http://example.org/categories/esx-/-esxi/</link>
+        <description>ESX / ESXi - Categoria - Cloud Containers Virtualização &amp; IAC</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>jcastro@jcastro.net ( João Castro)</managingEditor>
+            <webMaster>jcastro@jcastro.net ( João Castro)</webMaster><atom:link href="http://example.org/categories/esx-/-esxi/" rel="self" type="application/rss+xml" /><item>
+    <title>Entendendo os tipos de Hypervisors</title>
+    <link>http://example.org/2014/10/02/entendendo-os-tipos-de-hypervisors/</link>
+    <pubDate>Thu, 02 Oct 2014 17:24:27 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/2014/10/02/entendendo-os-tipos-de-hypervisors/</guid>
+    <description><![CDATA[****Esxi ****– É o core do Vsphere suíte, ele é responsável pela camada de virtualização dos servidores é parte fundamental para os demais produtos da suíte. Existe uma diferença entre a versão anterior da suíte, onde o Hypervisor estava disponível em duas diferentes versões ESX e ESXi. Ambos produtos compartilham a mesma engine, suportam as mesmas features e usam o mesmo modelo de licenciamento, e ambos são considerados bare-metal installation. No ESX a vmware usava uma derivação do Linux como service console, no caso o Redhat.]]></description>
+</item></channel>
+</rss>
