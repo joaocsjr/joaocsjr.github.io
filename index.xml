@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> 👨‍💻 [jcastro☮blog]-(~)</title>
-    <link>http://jcastro.net/</link>
-    <description>Recent content on  👨‍💻 [jcastro☮blog]-(~)</description>
+    <title>Joao Castro jr.</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Joao Castro jr.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://jcastro.net/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 20 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ansible Basico</title>
-      <link>http://jcastro.net/posts/ansible/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <title>Using Notices</title>
+      <link>https://example.com/post/notices/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://jcastro.net/posts/ansible/</guid>
+      <guid>https://example.com/post/notices/</guid>
       <description>
         
           
-            Basico sobre Ansible  NOTAS: sobre ansible
-Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS Facts: coleta informações sobre o host alvo, sempre executado antes de qualquer outro modulo ou comando para desativar add no playbook gather_facts: false
-$ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ansible_facts&amp;#34;: { &amp;#34;ansible_default_ipv4&amp;#34;: { &amp;#34;address&amp;#34;: &amp;#34;192.
+            The &amp;quot;Notices&amp;quot; shortcode enables you to call out pieces of information - sidebars, warnings, tips, etc.
+To create a notice on a page, you can use the notice shortcode.
+You use the notice shortcode, with the first parameter being one of note, info, tip, and warning. Then add a title for your note in quotes as the second parameter. The inner body of the note can be whatever markdown you want to create.
           
           
         
@@ -27,18 +27,15 @@ $ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ans
     </item>
     
     <item>
-      <title>Docker Swarm</title>
-      <link>http://jcastro.net/posts/swarm/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <title>Rich Content</title>
+      <link>https://example.com/post/rich-content/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://jcastro.net/posts/swarm/</guid>
+      <guid>https://example.com/post/rich-content/</guid>
       <description>
         
           
-            Swarm Basico Docker swarm   Nativo no docker concorrente do kubernetes é dividido em 2 funções:
-  Manager : Gerenciamento do cluster
- Necessario criar HA do manager sempre impar 51% de recursos minimo pra manter o cluster no ar sao diferenciados pelo token quando e feito o join no cluster    Worker : execução do container
- E possivel colocar em modo manutencao similar esxi Quando o host retorna ao cluster o containers nao sao executados novamente, necessario usar o comando de scale para distribuir a carga novamente      Service:
+            &lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
           
           
         
@@ -46,19 +43,15 @@ $ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ans
     </item>
     
     <item>
-      <title>Openshift</title>
-      <link>http://jcastro.net/posts/openshift/</link>
-      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <title>Markdown Syntax Guide</title>
+      <link>https://example.com/post/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://jcastro.net/posts/openshift/</guid>
+      <guid>https://example.com/post/markdown-syntax/</guid>
       <description>
         
           
-            Notas do treinamento Openshift Anatomia de um arquivo de manifesto Cada arquivo de manifesto tem esses 4 componentes
-  apiVersion: versão da api que sera usada de acordo com as features necessarias para app
-  kind: especifica qual o tipo de resource que esta sendo declarado
-  metadata: especifica o nome dos componentes, labels, namespace
-  spec: especifica a config da app, quais são os containers as images que serao usadas
+            &lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
           
           
         
@@ -66,20 +59,47 @@ $ ansible localhost -m setup localhost | success &amp;gt;&amp;gt; { &amp;#34;ans
     </item>
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>http://jcastro.net/posts/hugoisforlovers/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Placeholder Text</title>
+      <link>https://example.com/post/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://jcastro.net/posts/hugoisforlovers/</guid>
+      <guid>https://example.com/post/placeholder-text/</guid>
       <description>
         
           
-            Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
+            &lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://example.com/post/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/math-typesetting/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://example.com/post/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/emoji-support/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
           
           
         

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on  👨‍💻 [jcastro☮blog]-(~)</title>
-    <link>http://jcastro.net/tags/</link>
-    <description>Recent content in Tags on  👨‍💻 [jcastro☮blog]-(~)</description>
+    <title>Tags on Joao Castro jr.</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on Joao Castro jr.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://jcastro.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 10 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
