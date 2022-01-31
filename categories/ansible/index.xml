@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ansible - Categoria - Cloud Containers Virtualização &amp; IAC</title>
+        <link>http://example.org/categories/ansible/</link>
+        <description>ansible - Categoria - Cloud Containers Virtualização &amp; IAC</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>jcastro@jcastro.net ( João Castro)</managingEditor>
+            <webMaster>jcastro@jcastro.net ( João Castro)</webMaster><lastBuildDate>Tue, 24 Jan 2017 20:03:47 &#43;0000</lastBuildDate><atom:link href="http://example.org/categories/ansible/" rel="self" type="application/rss+xml" /><item>
+    <title>Basico sobre Ansible</title>
+    <link>http://example.org/ansible/</link>
+    <pubDate>Tue, 24 Jan 2017 20:03:47 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>http://example.org/ansible/</guid>
+    <description><![CDATA[NOTAS: sobre ansible
+Arquivo de configuraçao /etc/ansible/ansible.cfgvai usar o arquivo caso existe no diretorio padrãoou no diretorio home  lab access 1 2  Login is ssh student1@3.127.116.127 Password is RUZszeRcMvYcVS   Facts: coleta informações sobre o host alvo, sempre é executado antes de qualqueroutro modulo ou comandopara desativar add no playbookgather_facts: false 1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ansible localhost -m setup localhost | success &gt;&gt; { &#34;ansible_facts&#34;: { &#34;ansible_default_ipv4&#34;: { &#34;address&#34;: &#34;192.]]></description>
+</item></channel>
+</rss>
