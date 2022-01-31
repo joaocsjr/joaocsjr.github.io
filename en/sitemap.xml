@@ -81,6 +81,12 @@
                 href="https://jcastro.net/categories/"
                 />
   </url><url>
+    <loc>https://jcastro.net/series/container/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/categories/container/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jcastro.net/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -142,20 +148,19 @@
                 href="https://jcastro.net/tags/markdown/"
                 />
   </url><url>
-    <loc>https://jcastro.net/post-sample/markdown-syntax/</loc>
+    <loc>https://jcastro.net/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/post-sample/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/post-sample/markdown-syntax/"
-                />
   </url><url>
     <loc>https://jcastro.net/post/notas-treinamento-ansible/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/post/notas-treinamento-openshift/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/tags/openshift/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/categories/openshift/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/post/</loc>

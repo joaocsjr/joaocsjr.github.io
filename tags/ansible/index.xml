@@ -20,15 +20,30 @@
             &lt;h1 id=&#34;basico-sobre-ansible&#34;&gt;Basico sobre Ansible&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;NOTAS:&lt;/strong&gt; sobre &lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;arquivo-de-configuraçao&#34;&gt;Arquivo de configuraçao&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;/etc/ansible/ansible.cfg
-vai usar o arquivo caso existe no diretorio padrão
-ou no diretorio home 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;lab-access&#34;&gt;lab access&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;Login is ssh student1@3.127.116.127 
-Password is RUZszeRcMvYcVS
-&lt;/code&gt;&lt;/pre&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Notas do treinamento de Openshift</title>
+      <link>https://jcastro.net/post/notas-treinamento-openshift/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jcastro.net/post/notas-treinamento-openshift/</guid>
+      <description>
+        
+          
+            &lt;h2 id=&#34;notas-sobre-o-treinamento-de-openshift&#34;&gt;Notas sobre o treinamento de openshift&lt;/h2&gt;
+&lt;h4 id=&#34;anatomia-de-um-arquivo-de-manifesto&#34;&gt;Anatomia de um arquivo de manifesto&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cada arquivo de manifesto tem esses 4 componentes &lt;br&gt;&lt;p&gt;
+apiVersion: &lt;em&gt;versão da api que sera usada de acordo com as features necessarias para app &lt;br&gt;
+kind: especifica qual o tipo de resource que esta sendo declarado&lt;/em&gt; &lt;br&gt;
+metadata:  _especifica o nome dos componentes, labels, namespace &lt;br&gt;
+spec: &lt;em&gt;especifica a config da app, quais são os containers as images que serao usadas&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
           
           
         
