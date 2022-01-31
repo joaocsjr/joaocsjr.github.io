@@ -56,6 +56,18 @@
     <loc>https://jcastro.net/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jcastro.net/series/ansible/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/tags/ansible/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/categories/ansible/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/tags/automacao/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jcastro.net/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -82,7 +94,23 @@
                 href="https://jcastro.net/tags/css/"
                 />
   </url><url>
+    <loc>https://jcastro.net/tags/destacado/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://jcastro.net/pt/tags/destacado/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jcastro.net/tags/destacado/"
+                />
+  </url><url>
     <loc>https://jcastro.net/tags/featured/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/post/notas-treinamento-ansible/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/tags/html/</loc>
@@ -97,6 +125,12 @@
                 hreflang="en"
                 href="https://jcastro.net/tags/html/"
                 />
+  </url><url>
+    <loc>https://jcastro.net/tags/linux/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jcastro.net/categories/linux/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -123,6 +157,9 @@
                 hreflang="en"
                 href="https://jcastro.net/post/markdown-syntax/"
                 />
+  </url><url>
+    <loc>https://jcastro.net/tags/redhat/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>

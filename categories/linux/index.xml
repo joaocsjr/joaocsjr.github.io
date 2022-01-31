@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Joao Castro jr.</title>
+    <link>https://jcastro.net/categories/linux/</link>
+    <description>Recent content in linux on Joao Castro jr.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jcastro.net/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guia de Sintaxe Markdown</title>
+      <link>https://jcastro.net/post/notas-treinamento-ansible/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jcastro.net/post/notas-treinamento-ansible/</guid>
+      <description>
+        
+          
+            &lt;h1 id=&#34;basico-sobre-ansible&#34;&gt;Basico sobre Ansible&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;NOTAS:&lt;/strong&gt; sobre &lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;arquivo-de-configuraçao&#34;&gt;Arquivo de configuraçao&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;/etc/ansible/ansible.cfg
+vai usar o arquivo caso existe no diretorio padrão
+ou no diretorio home 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;lab-access&#34;&gt;lab access&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Login is ssh student1@3.127.116.127 
+Password is RUZszeRcMvYcVS
+&lt;/code&gt;&lt;/pre&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

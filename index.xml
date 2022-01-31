@@ -43,6 +43,33 @@ You use the notice shortcode, with the first parameter being one of note, info, 
     </item>
     
     <item>
+      <title>Guia de Sintaxe Markdown</title>
+      <link>https://jcastro.net/post/notas-treinamento-ansible/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jcastro.net/post/notas-treinamento-ansible/</guid>
+      <description>
+        
+          
+            &lt;h1 id=&#34;basico-sobre-ansible&#34;&gt;Basico sobre Ansible&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;NOTAS:&lt;/strong&gt; sobre &lt;code&gt;ansible&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;arquivo-de-configuraçao&#34;&gt;Arquivo de configuraçao&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;/etc/ansible/ansible.cfg
+vai usar o arquivo caso existe no diretorio padrão
+ou no diretorio home 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;lab-access&#34;&gt;lab access&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Login is ssh student1@3.127.116.127 
+Password is RUZszeRcMvYcVS
+&lt;/code&gt;&lt;/pre&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Markdown Syntax Guide</title>
       <link>https://jcastro.net/post/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>

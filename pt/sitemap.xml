@@ -30,6 +30,16 @@
   </url><url>
     <loc>https://jcastro.net/pt/tags/destacado/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jcastro.net/tags/destacado/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://jcastro.net/pt/tags/destacado/"
+                />
   </url><url>
     <loc>https://jcastro.net/pt/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -43,9 +53,6 @@
                 hreflang="pt"
                 href="https://jcastro.net/pt/post/markdown-syntax/"
                 />
-  </url><url>
-    <loc>https://jcastro.net/pt/post/markdown-syntax2/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/pt/series/guia-de-temas/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
