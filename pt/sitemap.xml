@@ -41,17 +41,17 @@
                 href="https://jcastro.net/pt/tags/destacado/"
                 />
   </url><url>
-    <loc>https://jcastro.net/pt/post/markdown-syntax/</loc>
+    <loc>https://jcastro.net/pt/post-sample/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jcastro.net/post/markdown-syntax/"
+                href="https://jcastro.net/post-sample/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/post/markdown-syntax/"
+                href="https://jcastro.net/pt/post-sample/markdown-syntax/"
                 />
   </url><url>
     <loc>https://jcastro.net/pt/series/guia-de-temas/</loc>
@@ -96,17 +96,17 @@
                 href="https://jcastro.net/pt/tags/markdown/"
                 />
   </url><url>
-    <loc>https://jcastro.net/pt/post/</loc>
+    <loc>https://jcastro.net/pt/post-sample/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jcastro.net/post/"
+                href="https://jcastro.net/post-sample/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/post/"
+                href="https://jcastro.net/pt/post-sample/"
                 />
   </url><url>
     <loc>https://jcastro.net/pt/series/</loc>
