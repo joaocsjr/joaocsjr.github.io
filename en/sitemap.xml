@@ -2,226 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jcastro.net/</loc>
-    <lastmod>2021-08-20T00:00:00+00:00</lastmod>
+    <loc>https://jcastro.net/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/post-sample/</loc>
-    <lastmod>2021-08-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/post-sample/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/post-sample/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/post-sample/notices/</loc>
-    <lastmod>2021-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/privacy/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post-sample/rich-content/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/shortcodes/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/tags/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/series/ansible/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/ansible/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/ansible/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/automacao/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="https://jcastro.net/categories/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jcastro.net/en/categories/"
+                />
   </url><url>
-    <loc>https://jcastro.net/series/container/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/container/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://jcastro.net/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/tags/css/"
+                href="https://jcastro.net/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jcastro.net/tags/css/"
+                href="https://jcastro.net/en/"
                 />
   </url><url>
-    <loc>https://jcastro.net/tags/destacado/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://jcastro.net/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/tags/destacado/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/tags/destacado/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/tags/featured/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/tags/html/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/tags/linux/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/linux/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jcastro.net/tags/markdown/"
-                />
-  </url><url>
-    <loc>https://jcastro.net/post/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post/notas-treinamento-ansible/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post/notas-treinamento-openshift/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/openshift/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/openshift/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/redhat/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/series/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://jcastro.net/pt/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="https://jcastro.net/series/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jcastro.net/en/series/"
+                />
   </url><url>
-    <loc>https://jcastro.net/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/series/themes-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post-sample/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post-sample/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/post-sample/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jcastro.net/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <loc>https://jcastro.net/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://jcastro.net/pt/about/"
+                href="https://jcastro.net/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jcastro.net/about/"
+                href="https://jcastro.net/en/tags/"
                 />
-  </url><url>
-    <loc>https://jcastro.net/tags/index/</loc>
   </url>
 </urlset>

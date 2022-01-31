@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kubernetes on Joao Castro jr</title>
+    <link>https://jcastro.net/categories/kubernetes/</link>
+    <description>Recent content in kubernetes on Joao Castro jr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jcastro.net/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notas do treinamento de kubernetes</title>
+      <link>https://jcastro.net/post/notas-cka/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jcastro.net/post/notas-cka/</guid>
+      <description>
+        
+          
+            Notas sobre o treinamento de kubernetes Kubernetes CKA Udemy  Image not found  a.warning-link { color: inherit !important; font-weight: inherit !important; text-decoration: underline !important; border-bottom: none !important; }  Link do site: https://blog.geekhunter.com.br/wp-content/uploads/2019/04/logo-kubernetes-arquitetura-de-cluster-3.png
+Link para o arquivo: /static/https://blog.geekhunter.com.br/wp-content/uploads/2019/04/logo-kubernetes-arquitetura-de-cluster-3.png
+Usando Page Bundles: false
+  Arquitetura   Image not found  a.warning-link { color: inherit !important; font-weight: inherit !important; text-decoration: underline !important; border-bottom: none !important; }  Link do site: https://d33wubrfki0l68.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
