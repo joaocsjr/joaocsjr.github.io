@@ -110,9 +110,6 @@
     <loc>https://jcastro.net/tags/featured/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jcastro.net/post/notas-treinamento-ansible/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://jcastro.net/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -157,6 +154,9 @@
                 hreflang="en"
                 href="https://jcastro.net/post/markdown-syntax/"
                 />
+  </url><url>
+    <loc>https://jcastro.net/post/notas-treinamento-ansible/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jcastro.net/tags/redhat/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
